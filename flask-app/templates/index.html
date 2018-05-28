@@ -1,0 +1,20 @@
+{% extends "layout.html" %} {% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">KMS Key Management</h1>
+</div>
+<form method="POST" action="/output">
+  <div class="form-group row">
+    <div class="col-md-5">
+      <input type="text" class="form-control" id="user" placeholder="Enter IAM username" name="username">
+      <small id="emailHelp" class="form-text text-muted">This is your AWS IAM username and not your eID</small>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-5">
+      <input type="password" class="form-control" id="key" placeholder="KMS Key" name="key">
+      <small id="emailHelp" class="form-text text-muted">This is they key you want to disable/delete</small>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
